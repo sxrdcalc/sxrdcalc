@@ -1,0 +1,51 @@
+\newcommand{\bff}{\mbox{\boldmath$f$}}
+\newcommand{\bfr}{\mbox{\boldmath$r$}}
+\newcommand{\bfR}{\mbox{\boldmath$R$}}
+\newcommand{\bfP}{\mbox{\boldmath$P$}}
+\newcommand{\bfk}{\mbox{\boldmath$k$}}
+\newcommand{\bfu}{\mbox{\boldmath$u$}}
+\newcommand{\bfq}{\mbox{\boldmath$q$}}
+\newcommand{\bfp}{\mbox{\boldmath$p$}}
+\newcommand{\bfF}{\mbox{\boldmath$F$}}
+\newcommand{\bfv}{\mbox{\boldmath$v$}}
+\newcommand{\bfa}{\mbox{\boldmath$a$}}
+\newcommand{\bfd}{\mbox{\boldmath$\rm d$}}
+\newcommand{\bfD}{ \mbox{\boldmath$ \underline{\underline{\rm D}}$ } }
+\newcommand{\grad}{\mbox{\boldmath$\nabla$}}
+\newcommand{\bfXi}{\mbox{\boldmath$\xi$}}
+\newcommand{\D}{\displaystyle}
+\newcommand{\V}{\vec}
+\newcommand{\bmr}{\boldsymbol{r}}
+\newcommand{\bmq}{\boldsymbol{q}}
+\newcommand{\bm}[1]{\boldsymbol{#1}}
+\newcommand{\ud}{\mathrm{d}}
+\newcommand{\ue}{\mathrm{e}}
+\newcommand{\By}{$\times$}
+\newcommand{\SqrtBy}[2]{$\sqrt{#1}$\kern0.2ex$\times$\kern-0.2ex$\sqrt{ #2}$}
+\newcommand{\Degree}{$^\circ$}
+\newcommand{\DegreeC}{$^\circ$C}
+\newcommand{\Ohmcm}{$\Omega\cdot$cm}
+
+\newenvironment{vardef}{%
+%  \setlength{\labelwidth}{5em}%
+%          \setlength{\listparindent}{12em}%
+  \renewcommand{\descriptionlabel}[1]%
+   {\hspace{\labelsep}\makebox[10em][l]{\texttt{##1}} --}
+          \begin{description}%
+	  \setlength{\itemsep}{0pt}%
+%          \setlength{\listparindent}{\labelwidth}%
+%          \setlength{\listparindent}{12em}%
+%	  \setlength{\parindent}{5em}
+	\setlength{\itemindent}{0em}
+%	\setlength{\leftmargin}{12em}
+}{\end{description}}
+
+\newenvironment{filestruc}{%
+\ttfamily %
+\setlength{\leftmargin}{1.2\leftmargin}%
+\begin{flushleft}%
+}%
+{\end{flushleft}}
+
+\newcommand{\fvar}[1]{\texttt{\em #1}}
+\newcommand{\fkey}[1]{\texttt{#1}}

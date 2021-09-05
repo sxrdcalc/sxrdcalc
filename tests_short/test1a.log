@@ -1,0 +1,21 @@
+
+---------------------------------------
+Program ../sxrdcalc for surface x-ray diffraction calculations.
+Version 3.3.3 - August 2019
+
+
+ Inputfile: test1a.in
+Calculating theoretical structure factors from model.
+   test for structure factors
+
+h from -3.00 to 5.00, step 1.00
+k from -3.00 to 5.00, step 1.00
+l from 0.20 to 0.30, step 0.02
+Scale factor: 1.00000000
+Output file for structure factors: test1a_f.dat
+
+Number of domains: 1 
+Model input file for domain 1: test1a.sur
+Occupancy of domain 1: 1.000000
+---------------------------------------
+

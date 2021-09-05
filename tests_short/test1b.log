@@ -1,0 +1,110 @@
+
+---------------------------------------
+Program ../sxrdcalc for surface x-ray diffraction calculations.
+Version 3.3.3 - August 2019
+
+
+ Inputfile: test1b.in
+Least-squares fit of model to experimental structure factors.
+   # test for fitting
+
+Number of domains: 1 
+
+Input file for experimental structure factors: test1b_f_in.dat
+Fit Input file for domain 1: test1b.fit
+Output file for domain 1: test1b_out.sur
+Occupancy of domain 1: 1.000000
+
+ Fit parameters:
+  Number of fit runs: 1
+  Variation of start parameters for each run: 0.000000
+  Maximum number of iterations: 100
+  Absolute stopping criteria (delta_abs): 0.000000010000
+  Relative stopping criteria (delta_rel): 0.000000000000
+  Seed for random number generator: 0
+---------------------------------------
+
+
+-----------------------------
+ Fit Nr. 1
+Starting parameters:
+Parameter Nr. 0: 1.000000
+Parameter Nr. 1: 0.000000
+Parameter Nr. 2: 0.000000
+Parameter Nr. 3: 0.000000
+
+Fixed parameters:
+
+
+Start, status -2, f: 584.311926
+Current parameters:
+Scale: 1.00000000000000, change: 0.00000000000000
+Parameter nr. 1: 0.000000, change 0.000000
+Parameter nr. 2: 0.000000, change 0.000000
+Parameter nr. 3: 0.000000, change 0.000000
+
+Iteration 1, status 0. f: 218.439914
+Current parameters:
+Scale: 0.80232445479605, change: -0.19767554520395
+Parameter nr. 1: -0.001312, change: -0.001312
+Parameter nr. 2: -0.033287, change: -0.033287
+Parameter nr. 3: 0.003683, change: 0.003683
+Convergence status: -2
+
+Iteration 2, status 0. f: 67.859800
+Current parameters:
+Scale: 0.94942212671818, change: 0.14709767192213
+Parameter nr. 1: 0.002067, change: 0.003379
+Parameter nr. 2: -0.059048, change: -0.025760
+Parameter nr. 3: 0.014764, change: 0.011081
+Convergence status: -2
+
+Iteration 3, status 0. f: 8.311326
+Current parameters:
+Scale: 0.99764752442595, change: 0.04822539770777
+Parameter nr. 1: 0.001205, change: -0.000861
+Parameter nr. 2: -0.069160, change: -0.010113
+Parameter nr. 3: 0.000495, change: -0.014269
+Convergence status: -2
+
+Iteration 4, status 0. f: 0.160113
+Current parameters:
+Scale: 1.00023171756390, change: 0.00258419313795
+Parameter nr. 1: -0.000018, change: -0.001223
+Parameter nr. 2: -0.070012, change: -0.000852
+Parameter nr. 3: -0.000013, change: -0.000508
+Convergence status: -2
+
+Iteration 5, status 0. f: 0.101725
+Current parameters:
+Scale: 1.00021630171527, change: -0.00001541584863
+Parameter nr. 1: -0.000000, change: 0.000018
+Parameter nr. 2: -0.070000, change: 0.000012
+Parameter nr. 3: -0.000000, change: 0.000012
+Convergence status: -2
+
+Iteration 6, status 0. f: 0.101725
+Current parameters:
+Scale: 1.00021629724888, change: -0.00000000446639
+Parameter nr. 1: -0.000000, change: 0.000000
+Parameter nr. 2: -0.070000, change: 0.000000
+Parameter nr. 3: -0.000000, change: 0.000000
+Convergence status: 0
+
+Fit results:
+Fit converged after 6 iterations.
+chi^2 = 0.010348, chi^2 / (degree of freedom) = 0.000026 (Intensities)
+chi^2 = 0.010350, chi^2 / (degree of freedom) = 0.000026 (Structure factors)
+R = 0.000097
+
+Scale factor:   1.00021629724888 +/- 0.001828
+Parameter Nr. 1:   -0.000000 +/- 0.000160
+Parameter Nr. 2:   -0.070000 +/- 0.000160
+Parameter Nr. 3:   -0.000000 +/- 0.001168
+
+Covariance matrix:
+          0            1            2            3      
+ 0  0.0000033408 -0.0000000109 -0.0000000109 0.0000000179
+ 1  -0.0000000109 0.0000000257 0.0000000067 -0.0000000223
+ 2  -0.0000000109 0.0000000067 0.0000000257 -0.0000000223
+ 3  0.0000000179 -0.0000000223 -0.0000000223 0.0000013633

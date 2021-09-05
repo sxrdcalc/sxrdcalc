@@ -1,0 +1,22 @@
+V. 1.2: 
+OK - Add possibility to write comments in file 
+OK - Write output file to stdout
+OK- Add calculation for same h, k ,l as in data file
+OK - read Debye-Waller factor
+OK - don't calculate bulk positions
+- add space group p3m1 (for SiC 3x3)
+
+V. 2.0
+OK - User-supplied starting values for parameters
+- GSL error handling
+- Check chi^2 / dof
+- Calculate scale at beginning of fit
+- Different atom types allowed (atom_scattering_f in loop over atoms...)
+OK - electron difference maps
+OK - ARE f AND df OKAY??? OR SHOULD BE LIKE SQUARE OF CURRENT FUNCTION?
+OK - IS DEFINITION AND USE OF SIGMA IN FIT CONSISTENT?????
+OK - Add domain occupancy in ls_fit_f, ls_fit_df (for summation over domains)
+OK - scale of electron difference maps
+OK - Scattering length, Debye-Waller factor correct?
+- Simulated annealing: Different step length for positions, Debye-Waller parameter.
+- Change name of scattering length?

@@ -1,0 +1,57 @@
+# Runs a series of test for sxrdcalc by comparing the output 
+# to reference output files.
+
+# Remove all output file from previous tests
+echo Testing sxrdcalc by comparing with reference output.
+echo Test is okay, if no output after Test Xx.
+
+echo Removing files from previous tests
+rm -f test1a_f.dat
+rm -f test1a.log
+rm -f test1b_out.sur
+rm -f test1b.log
+rm -f test1j_out1.sur
+rm -f test1j_out2.sur
+rm -f test1j.log
+rm -f test1r_out1.sur
+rm -f test1r_out2.sur
+rm -f test1r.log
+rm -f test4d_out.sur
+rm -f test4d.log
+rm -f test4e.log
+rm -f test4e_f.dat
+
+# Simple structure file in test1.sur
+echo Test 1a		 Structure factor calculation
+../sxrdcalc test1a.in > test1a.log
+diff test1a_f.dat test1a_f_ref.dat
+diff test1a.log test1a_ref.log
+
+echo Test 1b		 easy fit to calculated Fs
+../sxrdcalc test1b.in > test1b.log
+diff test1b_out.sur test1b_out_ref.sur
+diff test1b.log test1b_ref.log
+
+echo Test 1j   Simulated annealing fit - 2 domains, DW factor, occupancy
+../sxrdcalc test1j.in > test1j.log
+diff test1j_out1.sur test1j_out1_ref.sur
+diff test1j_out2.sur test1j_out2_ref.sur
+diff test1j.log test1j_ref.log
+
+echo Test 1r             fit to calculated Fs \(2 domains, DW factor, several runs\)
+../sxrdcalc test1r.in > test1r.log
+diff test1r_out1.sur test1r_out1_ref.sur
+diff test1r_out2.sur test1r_out2_ref.sur
+diff test1r.log test1r_ref.log
+
+echo Test 4d            fit to calculated Fs with bulk \(with anisotropic DW\) \(Fs from test4e\)
+../sxrdcalc test4d.in >test4d.log
+diff test4d.log test4d_ref.log
+diff test4d_out.sur test4d_out_ref.sur
+
+echo Test 4e        Structure factors of CRT - bulk Si + surface with anisotropic DW factor
+../sxrdcalc test4e.in >test4e.log
+diff test4e.log test4e_ref.log
+diff test4e_f.dat test4e_f_ref.dat
+
+echo Tests finished

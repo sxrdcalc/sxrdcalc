@@ -1,0 +1,747 @@
+
+---------------------------------------
+Program ../sxrdcalc for surface x-ray diffraction calculations.
+Version 3.3.3 - August 2019
+
+
+ Inputfile: test4d.in
+Least-squares fit of model to experimental structure factors.
+   # test for fitting
+
+Number of domains: 1 
+
+Input file for experimental structure factors: test4d_f_in.dat
+Input file for bulk structure: test4d.blk
+Penetration depth: 100000000000000007629769841091887003294964970946560.00
+
+Fit Input file for domain 1: test4d.fit
+Output file for domain 1: test4d_out.sur
+Occupancy of domain 1: 1.000000
+
+ Fit parameters:
+  Number of fit runs: 1
+  Variation of start parameters for each run: 0.000000
+  Maximum number of iterations: 1000
+  Absolute stopping criteria (delta_abs): 0.000000100000
+  Relative stopping criteria (delta_rel): 0.000000000000
+  Seed for random number generator: 0
+---------------------------------------
+
+
+-----------------------------
+ Fit Nr. 1
+Starting parameters:
+Parameter Nr. 0: 1.000000
+Parameter Nr. 1: 0.000000
+Parameter Nr. 2: 0.000000
+Parameter Nr. 3: 0.000000
+Parameter Nr. 10: 0.000000
+Parameter Nr. 11: 0.000000
+Parameter Nr. 12: 0.000000
+Parameter Nr. 13: 0.000000
+Parameter Nr. 14: 0.000000
+Parameter Nr. 15: 0.000000
+Parameter Nr. 16: 0.000000
+Parameter Nr. 17: 0.000000
+Parameter Nr. 20: 0.000000
+
+Fixed parameters:
+
+
+Start, status -2, f: 6999.399263
+Current parameters:
+Scale: 1.00000000000000, change: 0.00000000000000
+Parameter nr. 1: 0.000000, change 0.000000
+Parameter nr. 2: 0.000000, change 0.000000
+Parameter nr. 3: 0.000000, change 0.000000
+Parameter nr. 10: 0.000000, change 0.000000
+Parameter nr. 11: 0.000000, change 0.000000
+Parameter nr. 12: 0.000000, change 0.000000
+Parameter nr. 13: 0.000000, change 0.000000
+Parameter nr. 14: 0.000000, change 0.000000
+Parameter nr. 15: 0.000000, change 0.000000
+Parameter nr. 16: 0.000000, change 0.000000
+Parameter nr. 17: 0.000000, change 0.000000
+Parameter nr. 20: 0.000000, change 0.000000
+
+Iteration 1, status 0. f: 1785.648660
+Current parameters:
+Scale: 0.98766389765090, change: -0.01233610234910
+Parameter nr. 1: 0.001294, change: 0.001294
+Parameter nr. 2: -0.002328, change: -0.002328
+Parameter nr. 3: -0.005781, change: -0.005781
+Parameter nr. 10: -2.517455, change: -2.517455
+Parameter nr. 11: -1.349880, change: -1.349880
+Parameter nr. 12: 0.081762, change: 0.081762
+Parameter nr. 13: 0.402453, change: 0.402453
+Parameter nr. 14: -0.608399, change: -0.608399
+Parameter nr. 15: 0.168523, change: 0.168523
+Parameter nr. 16: 24.370735, change: 24.370735
+Parameter nr. 17: 13.837095, change: 13.837095
+Parameter nr. 20: -0.352707, change: -0.352707
+Convergence status: -2
+
+Iteration 2, status 0. f: 604.035621
+Current parameters:
+Scale: 1.00192890676330, change: 0.01426500911240
+Parameter nr. 1: 0.052701, change: 0.051407
+Parameter nr. 2: 0.040000, change: 0.042329
+Parameter nr. 3: -0.041330, change: -0.035549
+Parameter nr. 10: 0.088525, change: 2.605980
+Parameter nr. 11: -3.013481, change: -1.663601
+Parameter nr. 12: 0.751821, change: 0.670059
+Parameter nr. 13: 0.807903, change: 0.405449
+Parameter nr. 14: 0.299812, change: 0.908210
+Parameter nr. 15: 0.394225, change: 0.225702
+Parameter nr. 16: 20.146792, change: -4.223943
+Parameter nr. 17: 16.251130, change: 2.414035
+Parameter nr. 20: -0.532389, change: -0.179682
+Convergence status: -2
+
+Iteration 3, status 0. f: 407.951018
+Current parameters:
+Scale: 1.00119882098056, change: -0.00073008578274
+Parameter nr. 1: 0.044441, change: -0.008259
+Parameter nr. 2: 0.035103, change: -0.004898
+Parameter nr. 3: 0.008176, change: 0.049507
+Parameter nr. 10: 3.482857, change: 3.394332
+Parameter nr. 11: 5.653120, change: 8.666601
+Parameter nr. 12: 1.789608, change: 1.037787
+Parameter nr. 13: -1.230921, change: -2.038823
+Parameter nr. 14: 1.272425, change: 0.972614
+Parameter nr. 15: 0.834717, change: 0.440492
+Parameter nr. 16: 14.235001, change: -5.911791
+Parameter nr. 17: 20.055883, change: 3.804753
+Parameter nr. 20: -0.571266, change: -0.038876
+Convergence status: -2
+
+Iteration 4, status 0. f: 404.085173
+Current parameters:
+Scale: 1.00194398018950, change: 0.00074515920894
+Parameter nr. 1: -0.002431, change: -0.046872
+Parameter nr. 2: 0.013835, change: -0.021268
+Parameter nr. 3: -0.042221, change: -0.050397
+Parameter nr. 10: 5.624559, change: 2.141702
+Parameter nr. 11: 19.744317, change: 14.091197
+Parameter nr. 12: 5.969538, change: 4.179930
+Parameter nr. 13: 1.315767, change: 2.546687
+Parameter nr. 14: 1.411528, change: 0.139103
+Parameter nr. 15: 7.032220, change: 6.197503
+Parameter nr. 16: 13.722342, change: -0.512658
+Parameter nr. 17: 0.627941, change: -19.427942
+Parameter nr. 20: -0.445074, change: 0.126192
+Convergence status: -2
+
+Iteration 5, status 0. f: 210.487519
+Current parameters:
+Scale: 1.00047152806947, change: -0.00147245212003
+Parameter nr. 1: 0.013342, change: 0.015773
+Parameter nr. 2: -0.000287, change: -0.014122
+Parameter nr. 3: 0.001802, change: 0.044022
+Parameter nr. 10: 3.693495, change: -1.931063
+Parameter nr. 11: 16.428928, change: -3.315390
+Parameter nr. 12: 12.964634, change: 6.995095
+Parameter nr. 13: 4.179285, change: 2.863518
+Parameter nr. 14: -1.565494, change: -2.977022
+Parameter nr. 15: 2.932263, change: -4.099957
+Parameter nr. 16: 7.197793, change: -6.524549
+Parameter nr. 17: 4.539831, change: 3.911890
+Parameter nr. 20: -0.113402, change: 0.331671
+Convergence status: -2
+
+Iteration 6, status 0. f: 117.274275
+Current parameters:
+Scale: 0.99987586409491, change: -0.00059566397457
+Parameter nr. 1: -0.014863, change: -0.028205
+Parameter nr. 2: 0.025212, change: 0.025499
+Parameter nr. 3: -0.011782, change: -0.013583
+Parameter nr. 10: 3.295174, change: -0.398321
+Parameter nr. 11: 15.265896, change: -1.163032
+Parameter nr. 12: 12.341767, change: -0.622867
+Parameter nr. 13: 3.628260, change: -0.551024
+Parameter nr. 14: -1.560860, change: 0.004634
+Parameter nr. 15: 3.317567, change: 0.385304
+Parameter nr. 16: 5.357507, change: -1.840286
+Parameter nr. 17: 5.212170, change: 0.672339
+Parameter nr. 20: 0.115819, change: 0.229221
+Convergence status: -2
+
+Iteration 7, status 0. f: 84.187881
+Current parameters:
+Scale: 0.99959446915611, change: -0.00028139493880
+Parameter nr. 1: -0.004746, change: 0.010118
+Parameter nr. 2: 0.012655, change: -0.012557
+Parameter nr. 3: -0.007625, change: 0.004156
+Parameter nr. 10: 2.369530, change: -0.925644
+Parameter nr. 11: 12.556506, change: -2.709390
+Parameter nr. 12: 10.899215, change: -1.442552
+Parameter nr. 13: 2.898149, change: -0.730111
+Parameter nr. 14: -1.944268, change: -0.383408
+Parameter nr. 15: 3.671661, change: 0.354094
+Parameter nr. 16: 1.952246, change: -3.405262
+Parameter nr. 17: 6.589877, change: 1.377707
+Parameter nr. 20: 0.093485, change: -0.022334
+Convergence status: -2
+
+Iteration 8, status 0. f: 54.169904
+Current parameters:
+Scale: 0.99945781550035, change: -0.00013665365576
+Parameter nr. 1: -0.001026, change: 0.003719
+Parameter nr. 2: 0.018175, change: 0.005520
+Parameter nr. 3: -0.007560, change: 0.000066
+Parameter nr. 10: 1.513593, change: -0.855938
+Parameter nr. 11: 10.942040, change: -1.614465
+Parameter nr. 12: 10.293250, change: -0.605965
+Parameter nr. 13: 2.781623, change: -0.116526
+Parameter nr. 14: -2.330028, change: -0.385760
+Parameter nr. 15: 2.782286, change: -0.889375
+Parameter nr. 16: 2.221750, change: 0.269505
+Parameter nr. 17: 5.109520, change: -1.480357
+Parameter nr. 20: 0.006396, change: -0.087089
+Convergence status: -2
+
+Iteration 9, status 0. f: 41.535663
+Current parameters:
+Scale: 1.00042249576870, change: 0.00096468026835
+Parameter nr. 1: -0.001290, change: -0.000264
+Parameter nr. 2: 0.018030, change: -0.000146
+Parameter nr. 3: -0.008957, change: -0.001398
+Parameter nr. 10: 1.406955, change: -0.106637
+Parameter nr. 11: 10.406710, change: -0.535330
+Parameter nr. 12: 10.243085, change: -0.050165
+Parameter nr. 13: 2.374141, change: -0.407483
+Parameter nr. 14: -2.565536, change: -0.235508
+Parameter nr. 15: 2.600691, change: -0.181595
+Parameter nr. 16: 1.429971, change: -0.791779
+Parameter nr. 17: 5.113261, change: 0.003741
+Parameter nr. 20: -0.021754, change: -0.028150
+Convergence status: -2
+
+Iteration 10, status 0. f: 28.006448
+Current parameters:
+Scale: 1.00018945868816, change: -0.00023303708054
+Parameter nr. 1: -0.000242, change: 0.001048
+Parameter nr. 2: 0.018308, change: 0.000279
+Parameter nr. 3: -0.009104, change: -0.000146
+Parameter nr. 10: 1.028433, change: -0.378522
+Parameter nr. 11: 9.095698, change: -1.311012
+Parameter nr. 12: 9.992112, change: -0.250973
+Parameter nr. 13: 2.007617, change: -0.366524
+Parameter nr. 14: -2.900059, change: -0.334523
+Parameter nr. 15: 2.101391, change: -0.499300
+Parameter nr. 16: 0.502462, change: -0.927509
+Parameter nr. 17: 3.898027, change: -1.215234
+Parameter nr. 20: -0.031265, change: -0.009511
+Convergence status: -2
+
+Iteration 11, status 0. f: 6.577443
+Current parameters:
+Scale: 1.00029960247436, change: 0.00011014378620
+Parameter nr. 1: 0.000527, change: 0.000769
+Parameter nr. 2: 0.018925, change: 0.000617
+Parameter nr. 3: -0.009592, change: -0.000488
+Parameter nr. 10: 1.031079, change: 0.002646
+Parameter nr. 11: 8.602369, change: -0.493329
+Parameter nr. 12: 10.163187, change: 0.171075
+Parameter nr. 13: 1.834316, change: -0.173301
+Parameter nr. 14: -2.982975, change: -0.082916
+Parameter nr. 15: 1.985994, change: -0.115397
+Parameter nr. 16: -0.917610, change: -1.420072
+Parameter nr. 17: 2.237104, change: -1.660923
+Parameter nr. 20: -0.050110, change: -0.018845
+Convergence status: -2
+
+Iteration 12, status 0. f: 5.953112
+Current parameters:
+Scale: 0.99993906851275, change: -0.00036053396161
+Parameter nr. 1: 0.000350, change: -0.000177
+Parameter nr. 2: 0.019744, change: 0.000819
+Parameter nr. 3: -0.009891, change: -0.000298
+Parameter nr. 10: 1.011617, change: -0.019462
+Parameter nr. 11: 8.846778, change: 0.244409
+Parameter nr. 12: 10.056465, change: -0.106722
+Parameter nr. 13: 2.082413, change: 0.248097
+Parameter nr. 14: -2.990063, change: -0.007088
+Parameter nr. 15: 1.954452, change: -0.031542
+Parameter nr. 16: -0.768857, change: 0.148752
+Parameter nr. 17: 2.006128, change: -0.230976
+Parameter nr. 20: -0.051120, change: -0.001010
+Convergence status: -2
+
+Iteration 13, status 0. f: 2.382790
+Current parameters:
+Scale: 1.00009573400157, change: 0.00015666548882
+Parameter nr. 1: -0.000050, change: -0.000399
+Parameter nr. 2: 0.019835, change: 0.000091
+Parameter nr. 3: -0.009976, change: -0.000085
+Parameter nr. 10: 1.025595, change: 0.013978
+Parameter nr. 11: 8.870447, change: 0.023669
+Parameter nr. 12: 10.056701, change: 0.000236
+Parameter nr. 13: 2.013099, change: -0.069313
+Parameter nr. 14: -2.989047, change: 0.001015
+Parameter nr. 15: 1.988927, change: 0.034476
+Parameter nr. 16: -0.892408, change: -0.123551
+Parameter nr. 17: 2.072246, change: 0.066117
+Parameter nr. 20: -0.050625, change: 0.000495
+Convergence status: -2
+
+Iteration 14, status 0. f: 1.810568
+Current parameters:
+Scale: 1.00001704282531, change: -0.00007869117626
+Parameter nr. 1: 0.000057, change: 0.000107
+Parameter nr. 2: 0.019857, change: 0.000021
+Parameter nr. 3: -0.009958, change: 0.000018
+Parameter nr. 10: 1.026034, change: 0.000439
+Parameter nr. 11: 8.887055, change: 0.016608
+Parameter nr. 12: 10.050983, change: -0.005718
+Parameter nr. 13: 1.998761, change: -0.014338
+Parameter nr. 14: -2.988690, change: 0.000357
+Parameter nr. 15: 1.994269, change: 0.005342
+Parameter nr. 16: -0.920690, change: -0.028282
+Parameter nr. 17: 2.076631, change: 0.004385
+Parameter nr. 20: -0.050332, change: 0.000293
+Convergence status: -2
+
+Iteration 15, status 0. f: 1.092848
+Current parameters:
+Scale: 1.00000318853267, change: -0.00001385429264
+Parameter nr. 1: 0.000068, change: 0.000011
+Parameter nr. 2: 0.019878, change: 0.000021
+Parameter nr. 3: -0.009961, change: -0.000003
+Parameter nr. 10: 1.020314, change: -0.005720
+Parameter nr. 11: 8.936910, change: 0.049855
+Parameter nr. 12: 10.029761, change: -0.021222
+Parameter nr. 13: 1.985529, change: -0.013232
+Parameter nr. 14: -2.992509, change: -0.003819
+Parameter nr. 15: 1.999171, change: 0.004902
+Parameter nr. 16: -0.964762, change: -0.044072
+Parameter nr. 17: 2.057909, change: -0.018722
+Parameter nr. 20: -0.050209, change: 0.000122
+Convergence status: -2
+
+Iteration 16, status 0. f: 0.781941
+Current parameters:
+Scale: 0.99999365521765, change: -0.00000953331503
+Parameter nr. 1: 0.000053, change: -0.000016
+Parameter nr. 2: 0.019929, change: 0.000051
+Parameter nr. 3: -0.009975, change: -0.000013
+Parameter nr. 10: 1.012076, change: -0.008238
+Parameter nr. 11: 8.957231, change: 0.020322
+Parameter nr. 12: 10.017558, change: -0.012203
+Parameter nr. 13: 1.998217, change: 0.012688
+Parameter nr. 14: -2.995582, change: -0.003073
+Parameter nr. 15: 1.997195, change: -0.001976
+Parameter nr. 16: -0.962566, change: 0.002196
+Parameter nr. 17: 2.031355, change: -0.026553
+Parameter nr. 20: -0.050022, change: 0.000188
+Convergence status: -2
+
+Iteration 17, status 0. f: 0.725057
+Current parameters:
+Scale: 1.00000475084037, change: 0.00001109562272
+Parameter nr. 1: 0.000027, change: -0.000026
+Parameter nr. 2: 0.019953, change: 0.000024
+Parameter nr. 3: -0.009987, change: -0.000012
+Parameter nr. 10: 1.002594, change: -0.009481
+Parameter nr. 11: 9.002953, change: 0.045722
+Parameter nr. 12: 10.000950, change: -0.016608
+Parameter nr. 13: 1.992339, change: -0.005878
+Parameter nr. 14: -3.001115, change: -0.005533
+Parameter nr. 15: 2.003321, change: 0.006126
+Parameter nr. 16: -1.020139, change: -0.057573
+Parameter nr. 17: 2.013691, change: -0.017665
+Parameter nr. 20: -0.050045, change: -0.000024
+Convergence status: -2
+
+Iteration 18, status 0. f: 0.490650
+Current parameters:
+Scale: 0.99998473446424, change: -0.00002001637613
+Parameter nr. 1: 0.000019, change: -0.000007
+Parameter nr. 2: 0.019999, change: 0.000046
+Parameter nr. 3: -0.009998, change: -0.000011
+Parameter nr. 10: 1.001707, change: -0.000887
+Parameter nr. 11: 9.002675, change: -0.000278
+Parameter nr. 12: 10.000201, change: -0.000749
+Parameter nr. 13: 1.994652, change: 0.002313
+Parameter nr. 14: -3.000651, change: 0.000464
+Parameter nr. 15: 2.002373, change: -0.000948
+Parameter nr. 16: -1.014268, change: 0.005872
+Parameter nr. 17: 2.009426, change: -0.004264
+Parameter nr. 20: -0.049961, change: 0.000084
+Convergence status: -2
+
+Iteration 19, status 0. f: 0.092540
+Current parameters:
+Scale: 0.99998999730573, change: 0.00000526284149
+Parameter nr. 1: 0.000012, change: -0.000007
+Parameter nr. 2: 0.020000, change: 0.000001
+Parameter nr. 3: -0.009999, change: -0.000001
+Parameter nr. 10: 0.999918, change: -0.001789
+Parameter nr. 11: 9.001916, change: -0.000760
+Parameter nr. 12: 9.998776, change: -0.001424
+Parameter nr. 13: 1.999158, change: 0.004506
+Parameter nr. 14: -2.999800, change: 0.000851
+Parameter nr. 15: 2.000547, change: -0.001826
+Parameter nr. 16: -1.002471, change: 0.011796
+Parameter nr. 17: 2.000884, change: -0.008542
+Parameter nr. 20: -0.049981, change: -0.000019
+Convergence status: -2
+
+Iteration 20, status 0. f: 0.024072
+Current parameters:
+Scale: 0.99999912161391, change: 0.00000912430818
+Parameter nr. 1: 0.000001, change: -0.000011
+Parameter nr. 2: 0.020002, change: 0.000001
+Parameter nr. 3: -0.010000, change: -0.000002
+Parameter nr. 10: 0.999651, change: -0.000266
+Parameter nr. 11: 9.001422, change: -0.000494
+Parameter nr. 12: 9.998999, change: 0.000223
+Parameter nr. 13: 2.000218, change: 0.001060
+Parameter nr. 14: -3.000114, change: -0.000313
+Parameter nr. 15: 2.000009, change: -0.000538
+Parameter nr. 16: -1.000138, change: 0.002334
+Parameter nr. 17: 1.999327, change: -0.001557
+Parameter nr. 20: -0.050006, change: -0.000025
+Convergence status: -2
+
+Iteration 21, status 0. f: 0.015789
+Current parameters:
+Scale: 1.00000055467506, change: 0.00000143306116
+Parameter nr. 1: -0.000001, change: -0.000002
+Parameter nr. 2: 0.020001, change: -0.000000
+Parameter nr. 3: -0.010001, change: -0.000000
+Parameter nr. 10: 0.999742, change: 0.000091
+Parameter nr. 11: 9.001130, change: -0.000292
+Parameter nr. 12: 9.999311, change: 0.000313
+Parameter nr. 13: 2.000079, change: -0.000139
+Parameter nr. 14: -3.000145, change: -0.000031
+Parameter nr. 15: 2.000039, change: 0.000030
+Parameter nr. 16: -1.000430, change: -0.000292
+Parameter nr. 17: 1.999632, change: 0.000305
+Parameter nr. 20: -0.050004, change: 0.000002
+Convergence status: -2
+
+Iteration 22, status 0. f: 0.005163
+Current parameters:
+Scale: 1.00000014930353, change: -0.00000040537154
+Parameter nr. 1: -0.000001, change: 0.000000
+Parameter nr. 2: 0.020001, change: -0.000000
+Parameter nr. 3: -0.010000, change: 0.000000
+Parameter nr. 10: 0.999877, change: 0.000135
+Parameter nr. 11: 9.000167, change: -0.000963
+Parameter nr. 12: 9.999988, change: 0.000676
+Parameter nr. 13: 2.000053, change: -0.000026
+Parameter nr. 14: -2.999975, change: 0.000170
+Parameter nr. 15: 2.000005, change: -0.000033
+Parameter nr. 16: -1.000082, change: 0.000348
+Parameter nr. 17: 1.999757, change: 0.000124
+Parameter nr. 20: -0.050002, change: 0.000002
+Convergence status: -2
+
+Iteration 23, status 0. f: 0.003891
+Current parameters:
+Scale: 1.00000000700387, change: -0.00000014229965
+Parameter nr. 1: -0.000000, change: 0.000000
+Parameter nr. 2: 0.020000, change: -0.000001
+Parameter nr. 3: -0.010000, change: 0.000000
+Parameter nr. 10: 0.999961, change: 0.000084
+Parameter nr. 11: 9.000112, change: -0.000055
+Parameter nr. 12: 10.000005, change: 0.000017
+Parameter nr. 13: 1.999993, change: -0.000060
+Parameter nr. 14: -3.000046, change: -0.000071
+Parameter nr. 15: 2.000020, change: 0.000015
+Parameter nr. 16: -1.000168, change: -0.000086
+Parameter nr. 17: 1.999949, change: 0.000192
+Parameter nr. 20: -0.049999, change: 0.000002
+Convergence status: -2
+
+Iteration 24, status 0. f: 0.002605
+Current parameters:
+Scale: 0.99999990860574, change: -0.00000009839813
+Parameter nr. 1: 0.000000, change: 0.000000
+Parameter nr. 2: 0.020000, change: -0.000000
+Parameter nr. 3: -0.010000, change: -0.000000
+Parameter nr. 10: 0.999959, change: -0.000003
+Parameter nr. 11: 9.000103, change: -0.000009
+Parameter nr. 12: 9.999995, change: -0.000010
+Parameter nr. 13: 2.000000, change: 0.000007
+Parameter nr. 14: -3.000028, change: 0.000018
+Parameter nr. 15: 2.000015, change: -0.000005
+Parameter nr. 16: -1.000127, change: 0.000041
+Parameter nr. 17: 1.999931, change: -0.000018
+Parameter nr. 20: -0.049999, change: 0.000000
+Convergence status: -2
+
+Iteration 25, status 0. f: 0.001605
+Current parameters:
+Scale: 0.99999994679224, change: 0.00000003818649
+Parameter nr. 1: -0.000000, change: -0.000000
+Parameter nr. 2: 0.020000, change: 0.000000
+Parameter nr. 3: -0.010000, change: -0.000000
+Parameter nr. 10: 0.999962, change: 0.000003
+Parameter nr. 11: 9.000074, change: -0.000029
+Parameter nr. 12: 9.999979, change: -0.000016
+Parameter nr. 13: 2.000013, change: 0.000013
+Parameter nr. 14: -2.999997, change: 0.000031
+Parameter nr. 15: 2.000002, change: -0.000013
+Parameter nr. 16: -1.000041, change: 0.000086
+Parameter nr. 17: 1.999910, change: -0.000021
+Parameter nr. 20: -0.049999, change: -0.000000
+Convergence status: -2
+
+Iteration 26, status 0. f: 0.001261
+Current parameters:
+Scale: 1.00000000735459, change: 0.00000006056236
+Parameter nr. 1: -0.000000, change: -0.000000
+Parameter nr. 2: 0.020000, change: -0.000000
+Parameter nr. 3: -0.010000, change: -0.000000
+Parameter nr. 10: 0.999968, change: 0.000006
+Parameter nr. 11: 9.000068, change: -0.000006
+Parameter nr. 12: 9.999983, change: 0.000004
+Parameter nr. 13: 2.000010, change: -0.000003
+Parameter nr. 14: -3.000003, change: -0.000006
+Parameter nr. 15: 2.000003, change: 0.000001
+Parameter nr. 16: -1.000048, change: -0.000006
+Parameter nr. 17: 1.999926, change: 0.000016
+Parameter nr. 20: -0.050000, change: -0.000000
+Convergence status: -2
+
+Iteration 27, status 0. f: 0.000911
+Current parameters:
+Scale: 0.99999999748971, change: -0.00000000986488
+Parameter nr. 1: -0.000000, change: 0.000000
+Parameter nr. 2: 0.020000, change: -0.000000
+Parameter nr. 3: -0.010000, change: 0.000000
+Parameter nr. 10: 0.999982, change: 0.000014
+Parameter nr. 11: 9.000047, change: -0.000021
+Parameter nr. 12: 9.999988, change: 0.000006
+Parameter nr. 13: 2.000005, change: -0.000005
+Parameter nr. 14: -3.000007, change: -0.000005
+Parameter nr. 15: 2.000003, change: 0.000000
+Parameter nr. 16: -1.000044, change: 0.000003
+Parameter nr. 17: 1.999959, change: 0.000033
+Parameter nr. 20: -0.050000, change: 0.000000
+Convergence status: -2
+
+Iteration 28, status 0. f: 0.000730
+Current parameters:
+Scale: 0.99999999173552, change: -0.00000000575420
+Parameter nr. 1: -0.000000, change: 0.000000
+Parameter nr. 2: 0.020000, change: -0.000000
+Parameter nr. 3: -0.010000, change: 0.000000
+Parameter nr. 10: 1.000000, change: 0.000018
+Parameter nr. 11: 9.000002, change: -0.000046
+Parameter nr. 12: 9.999992, change: 0.000004
+Parameter nr. 13: 2.000004, change: -0.000001
+Parameter nr. 14: -2.999993, change: 0.000014
+Parameter nr. 15: 1.999996, change: -0.000007
+Parameter nr. 16: -0.999983, change: 0.000061
+Parameter nr. 17: 1.999987, change: 0.000028
+Parameter nr. 20: -0.050000, change: -0.000000
+Convergence status: -2
+
+Iteration 29, status 0. f: 0.000251
+Current parameters:
+Scale: 1.00000001725808, change: 0.00000002552256
+Parameter nr. 1: -0.000000, change: 0.000000
+Parameter nr. 2: 0.020000, change: -0.000000
+Parameter nr. 3: -0.010000, change: 0.000000
+Parameter nr. 10: 1.000001, change: 0.000002
+Parameter nr. 11: 9.000002, change: -0.000000
+Parameter nr. 12: 9.999996, change: 0.000003
+Parameter nr. 13: 2.000001, change: -0.000003
+Parameter nr. 14: -2.999999, change: -0.000005
+Parameter nr. 15: 1.999998, change: 0.000002
+Parameter nr. 16: -0.999995, change: -0.000012
+Parameter nr. 17: 1.999996, change: 0.000009
+Parameter nr. 20: -0.050000, change: -0.000000
+Convergence status: -2
+
+Iteration 30, status 0. f: 0.000169
+Current parameters:
+Scale: 1.00000000652206, change: -0.00000001073602
+Parameter nr. 1: -0.000000, change: 0.000000
+Parameter nr. 2: 0.020000, change: -0.000000
+Parameter nr. 3: -0.010000, change: 0.000000
+Parameter nr. 10: 1.000002, change: 0.000000
+Parameter nr. 11: 9.000001, change: -0.000000
+Parameter nr. 12: 9.999996, change: 0.000001
+Parameter nr. 13: 2.000001, change: -0.000001
+Parameter nr. 14: -2.999999, change: -0.000001
+Parameter nr. 15: 1.999999, change: 0.000001
+Parameter nr. 16: -0.999998, change: -0.000002
+Parameter nr. 17: 1.999998, change: 0.000002
+Parameter nr. 20: -0.050000, change: 0.000000
+Convergence status: -2
+
+Iteration 31, status 0. f: 0.000151
+Current parameters:
+Scale: 1.00000000398924, change: -0.00000000253282
+Parameter nr. 1: -0.000000, change: 0.000000
+Parameter nr. 2: 0.020000, change: -0.000000
+Parameter nr. 3: -0.010000, change: 0.000000
+Parameter nr. 10: 1.000001, change: -0.000000
+Parameter nr. 11: 9.000001, change: -0.000001
+Parameter nr. 12: 9.999999, change: 0.000002
+Parameter nr. 13: 2.000000, change: -0.000001
+Parameter nr. 14: -3.000001, change: -0.000002
+Parameter nr. 15: 2.000001, change: 0.000001
+Parameter nr. 16: -1.000002, change: -0.000005
+Parameter nr. 17: 2.000001, change: 0.000004
+Parameter nr. 20: -0.050000, change: 0.000000
+Convergence status: -2
+
+Iteration 32, status 0. f: 0.000132
+Current parameters:
+Scale: 0.99999999968770, change: -0.00000000430154
+Parameter nr. 1: 0.000000, change: 0.000000
+Parameter nr. 2: 0.020000, change: -0.000000
+Parameter nr. 3: -0.010000, change: 0.000000
+Parameter nr. 10: 1.000001, change: -0.000000
+Parameter nr. 11: 9.000001, change: -0.000000
+Parameter nr. 12: 9.999998, change: -0.000000
+Parameter nr. 13: 2.000000, change: 0.000000
+Parameter nr. 14: -3.000001, change: 0.000000
+Parameter nr. 15: 2.000000, change: -0.000000
+Parameter nr. 16: -1.000001, change: 0.000001
+Parameter nr. 17: 2.000001, change: -0.000001
+Parameter nr. 20: -0.050000, change: 0.000000
+Convergence status: -2
+
+Iteration 33, status 0. f: 0.000129
+Current parameters:
+Scale: 1.00000000054419, change: 0.00000000085648
+Parameter nr. 1: 0.000000, change: -0.000000
+Parameter nr. 2: 0.020000, change: 0.000000
+Parameter nr. 3: -0.010000, change: 0.000000
+Parameter nr. 10: 1.000000, change: -0.000001
+Parameter nr. 11: 9.000000, change: -0.000000
+Parameter nr. 12: 9.999999, change: 0.000000
+Parameter nr. 13: 2.000000, change: 0.000000
+Parameter nr. 14: -3.000000, change: 0.000001
+Parameter nr. 15: 2.000000, change: -0.000000
+Parameter nr. 16: -0.999999, change: 0.000002
+Parameter nr. 17: 1.999999, change: -0.000001
+Parameter nr. 20: -0.050000, change: -0.000000
+Convergence status: -2
+
+Iteration 34, status 0. f: 0.000125
+Current parameters:
+Scale: 1.00000000182959, change: 0.00000000128540
+Parameter nr. 1: -0.000000, change: -0.000000
+Parameter nr. 2: 0.020000, change: 0.000000
+Parameter nr. 3: -0.010000, change: 0.000000
+Parameter nr. 10: 1.000000, change: 0.000000
+Parameter nr. 11: 9.000000, change: -0.000000
+Parameter nr. 12: 9.999999, change: 0.000000
+Parameter nr. 13: 2.000000, change: -0.000000
+Parameter nr. 14: -3.000000, change: -0.000000
+Parameter nr. 15: 2.000000, change: 0.000000
+Parameter nr. 16: -1.000000, change: -0.000000
+Parameter nr. 17: 2.000000, change: 0.000000
+Parameter nr. 20: -0.050000, change: -0.000000
+Convergence status: -2
+
+Iteration 35, status 0. f: 0.000125
+Current parameters:
+Scale: 1.00000000140046, change: -0.00000000042913
+Parameter nr. 1: -0.000000, change: 0.000000
+Parameter nr. 2: 0.020000, change: -0.000000
+Parameter nr. 3: -0.010000, change: 0.000000
+Parameter nr. 10: 1.000000, change: -0.000000
+Parameter nr. 11: 9.000000, change: -0.000000
+Parameter nr. 12: 9.999999, change: 0.000000
+Parameter nr. 13: 2.000000, change: -0.000000
+Parameter nr. 14: -3.000000, change: -0.000000
+Parameter nr. 15: 2.000000, change: 0.000000
+Parameter nr. 16: -1.000000, change: -0.000001
+Parameter nr. 17: 2.000000, change: 0.000001
+Parameter nr. 20: -0.050000, change: 0.000000
+Convergence status: -2
+
+Iteration 36, status 0. f: 0.000124
+Current parameters:
+Scale: 1.00000000069497, change: -0.00000000070549
+Parameter nr. 1: 0.000000, change: 0.000000
+Parameter nr. 2: 0.020000, change: -0.000000
+Parameter nr. 3: -0.010000, change: 0.000000
+Parameter nr. 10: 1.000000, change: -0.000000
+Parameter nr. 11: 9.000000, change: -0.000000
+Parameter nr. 12: 9.999999, change: 0.000000
+Parameter nr. 13: 2.000000, change: 0.000000
+Parameter nr. 14: -3.000000, change: 0.000000
+Parameter nr. 15: 2.000000, change: -0.000000
+Parameter nr. 16: -1.000000, change: 0.000000
+Parameter nr. 17: 2.000000, change: -0.000000
+Parameter nr. 20: -0.050000, change: 0.000000
+Convergence status: -2
+
+Iteration 37, status 0. f: 0.000124
+Current parameters:
+Scale: 1.00000000082571, change: 0.00000000013074
+Parameter nr. 1: 0.000000, change: -0.000000
+Parameter nr. 2: 0.020000, change: 0.000000
+Parameter nr. 3: -0.010000, change: 0.000000
+Parameter nr. 10: 1.000000, change: -0.000000
+Parameter nr. 11: 9.000000, change: -0.000000
+Parameter nr. 12: 9.999999, change: 0.000000
+Parameter nr. 13: 2.000000, change: 0.000000
+Parameter nr. 14: -3.000000, change: 0.000000
+Parameter nr. 15: 2.000000, change: -0.000000
+Parameter nr. 16: -1.000000, change: 0.000000
+Parameter nr. 17: 2.000000, change: -0.000000
+Parameter nr. 20: -0.050000, change: -0.000000
+Convergence status: -2
+
+Iteration 38, status 0. f: 0.000124
+Current parameters:
+Scale: 1.00000000100331, change: 0.00000000017760
+Parameter nr. 1: 0.000000, change: -0.000000
+Parameter nr. 2: 0.020000, change: 0.000000
+Parameter nr. 3: -0.010000, change: 0.000000
+Parameter nr. 10: 1.000000, change: 0.000000
+Parameter nr. 11: 9.000000, change: -0.000000
+Parameter nr. 12: 9.999999, change: 0.000000
+Parameter nr. 13: 2.000000, change: -0.000000
+Parameter nr. 14: -3.000000, change: -0.000000
+Parameter nr. 15: 2.000000, change: 0.000000
+Parameter nr. 16: -1.000000, change: -0.000000
+Parameter nr. 17: 2.000000, change: 0.000000
+Parameter nr. 20: -0.050000, change: -0.000000
+Convergence status: 0
+
+Fit results:
+Fit converged after 38 iterations.
+chi^2 = 0.000000, chi^2 / (degree of freedom) = 0.000000 (Intensities)
+chi^2 = 0.000000, chi^2 / (degree of freedom) = 0.000000 (Structure factors)
+R = 0.000000
+
+Scale factor:   1.00000000100331 +/- 0.000249
+Parameter Nr. 1:   0.000000 +/- 0.000338
+Parameter Nr. 2:   0.020000 +/- 0.000354
+Parameter Nr. 3:   -0.010000 +/- 0.000338
+Parameter Nr. 10:   1.000000 +/- 0.500158
+Parameter Nr. 11:   9.000000 +/- 0.550147
+Parameter Nr. 12:   9.999999 +/- 0.507309
+Parameter Nr. 13:   2.000000 +/- 0.320412
+Parameter Nr. 14:   -3.000000 +/- 0.305298
+Parameter Nr. 15:   2.000000 +/- 0.304516
+Parameter Nr. 16:   -1.000000 +/- 0.497217
+Parameter Nr. 17:   2.000000 +/- 0.586068
+Parameter Nr. 20:   -0.050000 +/- 0.001793
+
+Covariance matrix:
+          0            1            2            3            10            11            12            13            14            15            16            17            20      
+ 0  0.0000000622 -0.0000000002 0.0000000006 -0.0000000025 0.0000010467 0.0000006054 -0.0000210196 0.0000002963 -0.0000026733 -0.0000028492 0.0000049921 0.0000022683 -0.0000000238
+ 1  -0.0000000002 0.0000001143 0.0000000196 0.0000000192 -0.0000071421 -0.0000125700 -0.0000101184 0.0000028962 -0.0000069408 -0.0000016365 -0.0000120555 0.0000062234 -0.0000001138
+ 2  0.0000000006 0.0000000196 0.0000001251 0.0000000215 -0.0000111704 0.0000124885 -0.0000145373 -0.0000055898 -0.0000015703 -0.0000075746 -0.0000143700 -0.0000230518 -0.0000000958
+ 3  -0.0000000025 0.0000000192 0.0000000215 0.0000001140 -0.0000053604 -0.0000083614 0.0000171076 0.0000002740 -0.0000005991 0.0000003657 0.0000032025 0.0000015283 0.0000000400
+ 4  0.0000010467 -0.0000071421 -0.0000111704 -0.0000053604 0.2501579839 -0.0691142059 -0.0443997510 -0.0262531481 0.0238631392 -0.0124706793 0.0269989196 -0.0023380283 0.0002108488
+ 5  0.0000006054 -0.0000125700 0.0000124885 -0.0000083614 -0.0691142059 0.3026612859 -0.0725312484 -0.0182536817 -0.0167550365 0.0400992472 -0.0438060723 -0.0387336841 0.0002070917
+ 6  -0.0000210196 -0.0000101184 -0.0000145373 0.0000171076 -0.0443997510 -0.0725312484 0.2573621012 0.0010048340 0.0375629908 0.0362342739 0.0263687990 0.0144802360 0.0002413717
+ 7  0.0000002963 0.0000028962 -0.0000055898 0.0000002740 -0.0262531481 -0.0182536817 0.0010048340 0.1026635509 0.0196126296 0.0133691924 -0.0253271742 -0.0039270648 -0.0000923196
+ 8  -0.0000026733 -0.0000069408 -0.0000015703 -0.0000005991 0.0238631392 -0.0167550365 0.0375629908 0.0196126296 0.0932067465 -0.0101600370 0.0024394492 0.0035605812 0.0000299205
+ 9  -0.0000028492 -0.0000016365 -0.0000075746 0.0000003657 -0.0124706793 0.0400992472 0.0362342739 0.0133691924 -0.0101600370 0.0927299795 -0.0003380707 -0.0039235867 0.0000529297
+ 10  0.0000049921 -0.0000120555 -0.0000143700 0.0000032025 0.0269989196 -0.0438060723 0.0263687990 -0.0253271742 0.0024394492 -0.0003380707 0.2472245943 0.1844429998 0.0000434634
+ 11  0.0000022683 0.0000062234 -0.0000230518 0.0000015283 -0.0023380283 -0.0387336841 0.0144802360 -0.0039270648 0.0035605812 -0.0039235867 0.1844429998 0.3434760269 -0.0000041029
+ 12  -0.0000000238 -0.0000001138 -0.0000000958 0.0000000400 0.0002108488 0.0002070917 0.0002413717 -0.0000923196 0.0000299205 0.0000529297 0.0000434634 -0.0000041029 0.0000032143

@@ -1,0 +1,96 @@
+2019-08 *** VERSION 3.3.3 ***
+        changes to use GSL 2.3
+
+2011-01 *** VERSION 3.3.2 ***
+	change calculation of CTR for integer l. l is replaced with l+1E-6 when l is integer. See Version 3.2
+
+2010-03  
+	*** VERSION 3.3.1 ***
+	add short_output keyword
+
+2010-03  
+	*** VERSION 3.3 ***
+	Added anisotropic Debye-Waller parameter
+
+2007-08-06  Wolfgang Voegeli
+	*** VERSION 3.2 ***
+	- Changed calculation of CTR for integer l. l is replaced with l+1E-8
+	when l is integer.
+
+2007-08-06  Wolfgang Voegeli
+	*** VERSION 2.93 ***
+	- Change calculation of CTR to include absorption
+	- Change lattice_par to a local variable
+	- Include bulk and penetration depth into call of fits (not used yet)
+	- SA fit does not work
+
+2007-08-06  Wolfgang Voegeli
+	*** VERSION 2.92 ***
+	Change calc_structure_factor to include bulk structure factor
+	no absorption -> spikes in F(l) at l integer.
+
+
+2007-08-06  Wolfgang Voegeli
+	*** VERSION 2.92 ***
+	Change calc_structure_factor to include bulk structure factor
+
+2007-08-06  Wolfgang Voegeli
+	*** VERSION 2.91 ***
+
+	Change nr_atoms to array with values for each domain
+
+	Introduce reading of bulk structure files. (not used yet)
+
+2007-08-06  Wolfgang Voegeli
+	*** VERSION 2.9 ***
+	
+	Preparation for calculation of crystal trunctation rodsOB
+	* calcs.c: 
+	- calc_structure_factor -> calc_structure_factor_domain
+	- calc_structure_factor: Include summation over domains, return
+	absolute value of F
+	- change calc_structure_factor_domain to calculate real and imaginary part of F
+	* calcs.h: change definition of calc_structure_factor accordingly
+	* sxrdcalc.c: structure_factor_data and structure_factor_range:
+  	summation over domains moved to calc_structure_factor.
+	
+
+2004-04-16  Wolfgang Voegeli  <voegeli@beetle.surf.nuqe.nagoya-u.ac.jp>
+
+	*** VERSION 1.2 ***
+	* Makefile, sxrdio.c, sxrdio.h, calcs.h, calcs.c:
+	*** empty log message ***
+
+	* sxrddefs.h: New file.
+
+	* sxrdcalc.c: Several changes:
+	- division into modules:
+	     sxrdcalc.c (main program and input file parser)
+	     sxrddefs.h (common definitions)
+	     sxrdio.c, headerfile sxrdio.h (input and output other than main input file)
+	     calcs.c, header file calcs.h (Calculations)
+	- input file parser.
+	- several surface domains for structure factor calculations possible.
+
+
+2004-04-14  Wolfgang Voegeli  <voegeli@beetle.surf.nuqe.nagoya-u.ac.jp>
+
+	* calcs.h, calcs.c, Makefile: New file.
+
+	* calcs.h: Header file for calcs.c - Contains functions for
+	sxrdcalc for calculating theoretical structure factor, patterson
+	map, chi^2...
+
+	* calcs.c: Functions for sxrdcalc that calculate theoretical
+	structure factor, patterson map, chi^2...
+
+2004-04-13  Wolfgang Voegeli  <voegeli@beetle.surf.nuqe.nagoya-u.ac.jp>
+        *** VERSION 1.1 ***
+	* sxrdcalc.c: Put I/O functions into seperate file sxrdio.c
+
+	* sxrdio.h, sxrdio.c: New file.
+
+2004-04-12  Wolfgang Voegeli  <voegeli@beetle.surf.nuqe.nagoya-u.ac.jp>
+        *** VERSION 1.0 ***
+	* sxrdcalc.c: New file.
+

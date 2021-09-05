@@ -1,0 +1,67 @@
+# Input file for sxrdcalc
+#
+# Insert a variable and a value for that variable, seperated by space.
+# Caution: This is case-sensitive!
+# '#' in the first column denotes comment lines , the rest of the line
+# is ignored.  
+# 
+# The 'do' variable determines what should be calculated. 
+# If the same variable is defined more than once, the last instance is
+# used. The maximum line length is 255 characters.
+# 
+
+#--- What to do ---
+#  do = patterson	# Calculate Patterson map
+#  do = theo_range	# Calculate F for a range of h, k, l
+#  do = theo_data	# Calculate F for same h, k, l as in F input file
+  do = ls_fit		# Structure refinement by least-squares fit to F
+
+#--- Filenames ---
+#  patterson_file = patterson_map.dat	# Output file for Patterson map
+  f_in_file = test1r_f_in.dat		# Input file for F's
+#  f_out_file = test_f.dat 		# Output file for structure factors 
+#  struc_in_file1 =  sic4h3x3-starke_test1.sur # Input file model structure (domain 1)
+#  struc_in_file2 =  sic4h3x3-starke_test2.sur # Input file model structure (domain 1)
+#  struc_in_file3 =  sic4h3x3-starke_test3.sur # Input file model structure (domain 1)
+#  struc_in_file4 =  sic4h3x3-starke_test4.sur # Input file model structure (domain 1)
+  fit_struc_in_file1 = test1r_1.fit # Input file for least-squares structure refinement (domain 1)
+  fit_struc_in_file2 = test1r_2.fit # Input file for least-squares structure refinement (domain 2)
+  fit_coord_out_file1 = test1r_out1.sur	# Output file for fitted coordinates (domain 1)
+  fit_coord_out_file2 = test1r_out2.sur	# Output file for fitted coordinates (domain 2)
+#--- Comment for output file (whole line)
+  comment = # test for fitting
+
+#-- Calculate Patterson map --
+# Symmetry of the surface (p6mm or p6)
+  symmetry = p6
+
+#-- Calculate structure factors from a model structure  --
+#--   for a range of h, k, l.				--
+# define domains
+  nr_domains = 2     # Number of domains
+  domain_occ1 = 0.5    # Occupancy for domain 1
+  domain_occ2 = 0.5    # Occupancy for domain 2
+# Ranges and step sizes of h, k, l
+  minh = 0.0
+  maxh = 9.0
+  steph = 1.0
+  mink = 0.0
+  maxk = 9.0
+  stepk = 1.0
+  minl = 0.2
+  maxl = 0.2 
+  stepl = 0.01
+# Bulk reflections 
+# (might give problems because of rounding if not integer)
+  bulkh = 3
+  bulkk = 3
+
+# For fit
+  print_intermediate = no      # Print information during fit?
+  n_fit = 3                 # Number of fits
+  par_var_width = 0.01           # Maximum variation in parameters for different fits
+  rng_seed = 89452              # Seed for random number generator
+
+  max_iteration = 100		# Maximal number of iterations.
+  delta_abs = 0.00005		# Fit stops if the changes dr_i in for the positions r_i is 
+  delta_rel = 0.0		# smaller than delta_abs + delta_rel * r_i (only delta_abs makes sense, actually)

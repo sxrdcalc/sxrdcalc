@@ -1,0 +1,125 @@
+
+---------------------------------------
+Program ../sxrdcalc for surface x-ray diffraction calculations.
+Version 3.3.3 - August 2019
+
+
+ Inputfile: test1r.in
+Least-squares fit of model to experimental structure factors.
+   # test for fitting
+
+Number of domains: 2 
+
+Input file for experimental structure factors: test1r_f_in.dat
+Fit Input file for domain 1: test1r_1.fit
+Output file for domain 1: test1r_out1.sur
+Occupancy of domain 1: 0.500000
+Fit Input file for domain 2: test1r_2.fit
+Output file for domain 2: test1r_out2.sur
+Occupancy of domain 2: 0.500000
+
+ Fit parameters:
+  Number of fit runs: 3
+  Variation of start parameters for each run: 0.010000
+  Maximum number of iterations: 100
+  Absolute stopping criteria (delta_abs): 0.000050000000
+  Relative stopping criteria (delta_rel): 0.000000000000
+  Seed for random number generator: 89452
+---------------------------------------
+
+
+-----------------------------
+ Fit Nr. 1
+Starting parameters:
+Parameter Nr. 0: 1.000000
+Parameter Nr. 1: 0.007406
+Parameter Nr. 2: -0.007276
+Parameter Nr. 3: 0.006914
+Parameter Nr. 4: -0.005212
+
+Fixed parameters:
+
+
+Fit results:
+Fit converged after 17 iterations.
+chi^2 = 0.213290, chi^2 / (degree of freedom) = 0.000540 (Intensities)
+chi^2 = 0.203608, chi^2 / (degree of freedom) = 0.000515 (Structure factors)
+R = 0.000811
+
+Scale factor:   1.00024165743034 +/- 0.004476
+Parameter Nr. 1:   0.046504 +/- 0.006225
+Parameter Nr. 2:   -0.002869 +/- 0.006481
+Parameter Nr. 3:   0.004243 +/- 0.025412
+Parameter Nr. 4:   -0.005006 +/- 0.011804
+
+Covariance matrix:
+          0            1            2            3            4      
+ 0  0.0000200375 -0.0000035225 -0.0000007917 -0.0000075135 0.0000300421
+ 1  -0.0000035225 0.0000387509 0.0000022837 0.0000598944 -0.0000191299
+ 2  -0.0000007917 0.0000022837 0.0000419991 0.0000291348 -0.0000063590
+ 3  -0.0000075135 0.0000598944 0.0000291348 0.0006457759 -0.0000199808
+ 4  0.0000300421 -0.0000191299 -0.0000063590 -0.0000199808 0.0001393304
+
+-----------------------------
+ Fit Nr. 2
+Starting parameters:
+Parameter Nr. 0: 1.000000
+Parameter Nr. 1: -0.006328
+Parameter Nr. 2: 0.008855
+Parameter Nr. 3: -0.000582
+Parameter Nr. 4: 0.002851
+
+Fixed parameters:
+
+
+Fit results:
+Fit converged after 23 iterations.
+chi^2 = 0.387104, chi^2 / (degree of freedom) = 0.000980 (Intensities)
+chi^2 = 0.293584, chi^2 / (degree of freedom) = 0.000743 (Structure factors)
+R = 0.001417
+
+Scale factor:   1.00217710448148 +/- 0.004473
+Parameter Nr. 1:   0.045946 +/- 0.005211
+Parameter Nr. 2:   -0.002939 +/- 0.006282
+Parameter Nr. 3:   -0.000271 +/- 0.021974
+Parameter Nr. 4:   -0.004953 +/- 0.011858
+
+Covariance matrix:
+          0            1            2            3            4      
+ 0  0.0000200047 -0.0000028807 0.0000000032 0.0000004258 0.0000300692
+ 1  -0.0000028807 0.0000271494 -0.0000010803 -0.0000032688 -0.0000174944
+ 2  0.0000000032 -0.0000010803 0.0000394695 -0.0000006613 -0.0000028466
+ 3  0.0000004258 -0.0000032688 -0.0000006613 0.0004828426 0.0000016759
+ 4  0.0000300692 -0.0000174944 -0.0000028466 0.0000016759 0.0001406128
+
+-----------------------------
+ Fit Nr. 3
+Starting parameters:
+Parameter Nr. 0: 1.000000
+Parameter Nr. 1: 0.003905
+Parameter Nr. 2: -0.005029
+Parameter Nr. 3: 0.008790
+Parameter Nr. 4: 0.009500
+
+Fixed parameters:
+
+
+Fit results:
+Fit converged after 27 iterations.
+chi^2 = 0.209606, chi^2 / (degree of freedom) = 0.000531 (Intensities)
+chi^2 = 0.163899, chi^2 / (degree of freedom) = 0.000415 (Structure factors)
+R = 0.001001
+
+Scale factor:   1.00154343306551 +/- 0.004476
+Parameter Nr. 1:   0.046667 +/- 0.006517
+Parameter Nr. 2:   -0.002565 +/- 0.007122
+Parameter Nr. 3:   0.003190 +/- 0.026956
+Parameter Nr. 4:   -0.004968 +/- 0.011833
+
+Covariance matrix:
+          0            1            2            3            4      
+ 0  0.0000200377 -0.0000037502 -0.0000004966 -0.0000068480 0.0000300743
+ 1  -0.0000037502 0.0000424735 0.0000012278 0.0000587094 -0.0000210169
+ 2  -0.0000004966 0.0000012278 0.0000507164 0.0000212207 -0.0000054102
+ 3  -0.0000068480 0.0000587094 0.0000212207 0.0007266166 -0.0000194045
+ 4  0.0000300743 -0.0000210169 -0.0000054102 -0.0000194045 0.0001400255

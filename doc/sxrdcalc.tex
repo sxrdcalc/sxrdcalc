@@ -1,0 +1,402 @@
+\documentclass[a4paper]{article}
+
+\begin{document}
+
+
+\newenvironment{vardef}{%
+%  \setlength{\labelwidth}{5em}%
+%          \setlength{\listparindent}{12em}%
+  \renewcommand{\descriptionlabel}[1]%
+   {\hspace{\labelsep}\makebox[10em][l]{\texttt{##1}} --}
+          \begin{description}%
+          \setlength{\itemsep}{0pt}%
+%          \setlength{\listparindent}{\labelwidth}%
+%          \setlength{\listparindent}{12em}%
+%         \setlength{\parindent}{5em}
+        \setlength{\itemindent}{0em}
+%       \setlength{\leftmargin}{12em}
+}{\end{description}}
+
+\newenvironment{filestruc}{%
+\ttfamily %
+\setlength{\leftmargin}{1.2\leftmargin}%
+\begin{flushleft}%
+}%
+{\end{flushleft}}
+
+\newcommand{\fvar}[1]{\texttt{\em #1}}
+\newcommand{\fkey}[1]{\texttt{#1}}
+
+
+\title{SXRDcalc}
+\author{Wolfgang Voegeli \\
+Quantum Engineering, Nagoya Univ. and ISSP, Tokyo Univ.}
+\maketitle{}
+
+\renewcommand{\descriptionlabel}[1]%
+         {\hspace{\labelsep}\textsf{#1}}
+
+The program \texttt{sxrdcalc} was developed to analyse the surface X-ray
+diffraction data. It can be used to calculate X-ray diffraction
+intensities from a surface layer, to calculate a Patterson map of
+experimental data, and to fit a model structure to experimental data
+using either a Levenberg-Marquardt least-squares fit or  simulated
+annealing.
+
+The program has been written in the C programming language. It uses
+routines from the the GNU scientific library (GSL) for the
+least-squares fitting. It should be possible to compile it with any C
+compiler Tests were made with the GNU \texttt{gcc} compiler (versions 3.4.3
+and 4.1.2) and the Intel \texttt{icc} compiler (version 8.1).
+
+The program is started by typing
+\begin{verbatim}
+sxrdcalc inputfile > logfile
+\end{verbatim}
+on the command line. \texttt{inputfile} is the name of the main
+input file, which contains the parameters and the names of the files
+defining the structural models etc. This is explained in the next
+section.
+The output of the program including the fit results like optimized
+parameter values are printed to standard output only, usually one
+would want to save the output to a file \texttt{logfile} like above.
+
+\section{Main input file}
+The main input file contains the information telling \texttt{sxrdcalc}
+what to do. The input file is a simple text file, each line contains
+an assignment to a variable in the following form:
+\begin{verbatim}
+variable = value
+\end{verbatim}
+The possible variables and values are explained below. The
+input file is case-sensitive. If the same variable is defined more
+than once, then the last definition is used. Variables that are not needed,
+empty lines and additional whitespace are ignored. A \texttt{\#}
+anywhere on a line introduces a comment, everything to the right of
+the \texttt{\#} will be ignored.
+
+The most important variable is the \texttt{do} variable. This tells
+the program which task it should do. For example, 
+\begin{verbatim}
+do = patterson
+\end{verbatim}
+means that the Patterson map should be calculated from experimental
+intensities. Possible values for \texttt{do} are:
+%{ \renewcommand{\descriptionlabel}[1]%
+%  {\hspace{\labelsep}\texttt{#1} \hspace{2em} }
+\begin{vardef}
+\item[patterson] Calculate Patterson map. 
+%\item[electron\_map] Calculate electron map.
+%\item[electron\_diff\_map] Calculate electron difference map.
+\item[theo\_range] Calculate structure factors for a range of $h$,
+$k$, and $l$. 
+\item[theo\_data] Calculate structure factors for same $h$, $k$, and
+$l$ as in input file.
+\item[ls\_fit] Structure refinement by least-squares fit. 
+\item[sa\_fit] Structure refinement by simulated annealing fit.
+{\bf Not working correctly at present!}
+\end{vardef}
+
+The other variables are explained in the following.
+
+ The names of the
+additional input files are defined with:
+\begin{vardef}
+
+\item[f\_in\_file] Input file for structure factors.
+\item[struc\_in\_file1] Input file for model structure (domain 1).
+\item[struc\_in\_file$N$] Input file for model structure (domain $N$).
+\item[bulk\_struc\_in\_file] Input file for bulk structure.
+\item[fit\_struc\_in\_file1] Structure input file for structure
+refinement (domain~1). 
+\item[fit\_struc\_in\_file$N$] Structure input file for structure
+refinement (domain~$N$). 
+\end{vardef}
+Output files are defined with:
+\begin{vardef}
+\item[patterson\_file] Output file for Patterson map.  
+\item[f\_out\_file] Output file for structure factors.
+\item[fit\_coord\_out\_file1] Output file for fitted coordinates
+(domain~1).
+\item[fit\_coord\_out\_file$N$] Output file for fitted coordinates
+(domain~$N$).  
+\end{vardef}
+The maximum number of domains with different structures is 20. The
+intensities of the domains are added to get the total intensity. The
+number of domains and relative occurence are defined with the
+following variables: 
+\begin{vardef}
+\item[nr\_domains] Number of domains.
+\item[domain\_occ1] Occupancy for domain 1.
+\item[domain\_occ$N$] Occupancy for domain $N$.
+\end{vardef}
+The penetration depth of the X-rays into the bulk can be set with:
+\begin{vardef}
+\item[penetration\_depth] Penetration depth of X-rays into crystal
+\end{vardef}
+The unit is the reciprocal of the lattice parameter. Negative
+penetration depths are interpreted as infinite penetration depth. The
+penetration depth is only important near to Bragg peaks. \\
+For the calculation of the Patterson map, the symmetry of the surface
+has to be given with:
+\begin{vardef}
+\item[symmetry] Symmetry of the surface used for Patterson map.
+\end{vardef}
+If \texttt{do} is set to \texttt{theo\_range}, then the $h$, $k$ and
+$l$ for which the structure factors are calculated are selected
+with:
+\begin{vardef}
+\item[minh] Minimum $h$
+\item[maxh] Maximum $h$
+\item[steph] Step size for $h$
+\item[mink] Minimum $k$
+\item[maxk] Maximum $k$
+\item[stepk] Step size for $k$
+\item[minl] Minimum $l$
+\item[maxl] Maximum $l$
+\item[stepl] Step size for $l$
+\end{vardef}
+The structure factors that are calculated when \texttt{do} is
+\texttt{theo\_range} or \texttt{theo\_data} are scaled with the value
+of 
+\begin{vardef}
+\item[theo\_scale] Scale for structure factors.
+\end{vardef}
+
+For the structure refinement, one should use several different
+starting parameters to make sure that the global minimum is found. The
+starting parameters can be varied randomly with:
+\begin{vardef}
+\item[n\_fit] Number of fits
+\item[par\_var\_width] Width of the gaussian function for varying the
+parameters 
+\item[rng\_seed] Seed for random number generator
+\end{vardef}
+For the least-squares structure refinement the following input
+variables can be used: 
+\begin{vardef}
+\item[max\_iteration] Maximal number of iterations.
+\item[delta\_abs] Fit stops if the changes $\Delta r_i$
+ of the positions $r_i$ is smaller than delta\_abs 
+\end{vardef}
+The simulated annealing structure refinement is controlled with the
+following variables:
+\begin{vardef}
+\item[n\_tries] The number of points to try for each step 
+\item[iters\_fixed\_T] The number of iterations at each temperature
+\item[step\_size] The maximum step size in the random walk
+\item[sa\_k] Boltzmann K 
+\item[t\_initial] Initial temperature
+\item[mu\_t] damping factor for temperature
+\item[t\_min] Minimum temperature
+\item[sa\_seed] Seed for random number generator
+\end{vardef}
+Information about the current fit can be printed at each step of the
+iteration or  only at the end of each fit:
+\begin{vardef}
+\item[print\_intermediate] Print intermediate information at each step
+(yes or no).
+\end{vardef}
+
+Comments can be inserted at the beginning of the output file with the
+following variable:
+\begin{vardef}
+\item[comment] Comment for output file. This uses the whole line.
+\end{vardef}
+
+\section{Other input files}
+The format of the input file for the experimental structure factors for the calculation of the Patterson map or the structure refinement is the following:
+\begin{filestruc}
+$h$ $k$ $l$ $F$ $\sigma$ \\
+$h$ $k$ $l$ $F$ $\sigma$ \\
+\ldots \\
+\ldots \\
+\end{filestruc}
+$h$, $k$ and $l$ are the reciprocal lattice coordinates of the reflection, $F$ is the structure factor and $\sigma$ the standard deviation of $F$.
+
+For the calculation of the structure factors of a model structure, the
+atomic positions are given in a file with the following structure: 
+\begin{filestruc}
+\em Comment \\
+a b c $\alpha$ $\beta$ $\gamma$ \\
+atomsymbol $r_1$ $r_2$ $r_3$ DWfactor occupancy \\
+atomsymbol $r_1$ $r_2$ $r_3$ DWfactor occupancy \\
+\ldots \\
+\end{filestruc}
+In the first line a comment, for example the name of the structure,
+can be given. The second line defines the unit cell. $a$, $b$ and $c$
+are the length of the unit cell vectors and $\alpha$, $\beta$ and
+$\gamma$ the angles of the unit cell. The definition of the unit cell
+should correspond to the reciprocal space unit cell used for the
+structure factors. The following lines define the atoms. \fvar{atomsymbol} is the chemical symbol of the atom, e.g. Si. 
+$r_1$, $r_2$ and $r_3$ are the reduced coordinates of the atom in the
+unit cell defined in the second line. \fvar{DWfactor} is the
+Debye-Waller factor $ B=8\pi^2\langle u^2\rangle$ of the atom (in
+\AA$^2$). $\langle u^2\rangle$ is the mean-square displacement of
+the atom. \fvar{occupancy} is the
+fractional occupancy of the atom. The occupancy  is optional, if it is not present, an occupancy of $1.0$ will be assumed.
+
+Alternatively, the atoms can be given by preceding the keyword
+\fkey{pos}:
+\begin{filestruc}
+pos {\em atomsymbol $r_1$ $r_2$ $r_3$ DWfactor occupancy}
+\end{filestruc}
+Anisotropic Debye-Waller factors are given by adding a line with the
+keyword \fkey{aniso\_dw} after a line defining an atom:
+\begin{filestruc}
+pos {\em atomsymbol $r_1$ $r_2$ $r_3$ DWfactor occupancy} \\
+aniso\_dw {\em $\beta_{11}$ $\beta_{22}$ $\beta_{33}$ $\beta_{12}$
+ $\beta_{13}$ $\beta_{23}$}
+\end{filestruc}
+$\beta_{ij}$ are the elements of the anisotropic temperature factor
+tensor $\beta$
+\begin{displaymath}
+\beta = 
+\left(\begin{array}{ccc}
+\beta_{11} & \beta_{12} & \beta_{13}\\
+\beta_{12} & \beta_{22} & \beta_{23}\\
+\beta_{13} & \beta_{23} & \beta_{33}\\
+\end{array} \right) 
+\end{displaymath}
+\begin{eqnarray}
+T(\vec{h}) & = & \exp\left(-\sum_{i,j}\beta_{ij}h_ih_j\right), i,j = 1,2,3
+ \\
+\beta_{ij} & = & 2\pi^2 a_i^*a_j^*U_{ij}
+\end{eqnarray}
+$h_i $ are the Miller indices, $a_i^*$ the absolute values of the reciprocal lattice
+vectors. The mean-square displacement in the reciprocal lattice
+direction $\vec{q} = q_1(\frac{\vec{a_1^*}}{a_1^*})
++q_2(\frac{\vec{a_2^*}}{a_2^*})+ q_3(\frac{\vec{a_3^*}}{a_3^*})$ is 
+\begin{displaymath}
+\langle u_q^2\rangle = \sum_{i,j} q_iq_j U_{ij}
+\end{displaymath}
+(see B. T. M. Willis, A. W. Pryor, {\em Thermal Vibrations in
+Crystallography}, Cambridge University Press (Cambridge 1975); Doctor
+thesis of H. Tajiri)
+Both isotropic and anisotropic temperature factors can be given for the
+same atom, but this does not make much sense.
+
+Lines starting with a \fkey{\#} will be ignored and can be used for
+comments. The possible keywords for the input file for the structure
+refinement will be ignored as well, if present.
+
+
+The input file for the bulk structure has the same format as for the
+surface model structures. The same unit cell and origin should be used for both.
+
+The input file for the structure refinement defines the atomic positions and, in addition, the fit parameters for each atom. 
+The fit parameters can be for each atom three different displacement vectors, a isotropic Debye-Waller factor and the occupancy of the atom.
+An overall scale factor is also included into the fit automatically.
+The format of the structure refinement input file is:
+\begin{filestruc}
+{\em Comment \\
+a b c $\alpha$ $\beta$ $\gamma$ }\\
+pos {\em atomsymbol $r_1$ $r_2$ $r_3$ DWfactor occupancy }\\
+aniso\_dw {\em $\beta_{11}$ $\beta_{22}$ $\beta_{33}$ $\beta_{12}$
+ $\beta_{13}$ $\beta_{23}$} \\
+displ1 {\em parnumber $dr_1$ $dr_2$ $dr_3$} \\
+displ2 {\em parnumber $dr_1$ $dr_2$ $dr_3$} \\
+displ3 {\em parnumber $dr_1$ $dr_2$ $dr_3$} \\
+dw\_par {\em parnumber scale} \\
+aniso\_dw\_par {\em parnumber $d\beta_{11}$ $d\beta_{22}$ $d\beta_{33}$
+ $d\beta_{12}$ $d\beta_{13}$ $d\beta_{23}$} \\
+occ {\em parnumber} \\
+pos {\em atomsymbol $r_1$ $r_2$ $r_3$ DWfactor occupancy }\\
+displ1 {\em parnumber $dr_1$ $dr_2$ $dr_3$} \\
+displ2 {\em parnumber $dr_1$ $dr_2$ $dr_3$} \\
+displ3 {\em parnumber $dr_1$ $dr_2$ $dr_3$} \\
+dw\_par {\em parnumber scale} \\
+occ {\em parnumber} \\
+\ldots \\
+\ldots \\
+start\_par  0 {\em value} \\
+start\_par {\em parnumber value} \\
+\ldots \\
+\ldots \\
+\end{filestruc}
+The first two lines are the same as for the input file for a structural model above.
+The \fkey{pos} keyword indictates the definition of an atom. The meaning of each term is the same as in the input file for a structural model.
+\fkey{displ1}, \fkey{displ2} and \fkey{displ3} give the displacements vectors that are allowed for that atom.
+\fvar{parnumber} is the number of the fit parameter assigned to this displacement.
+\fvar{$dr_1$}, \fvar{$dr_2$} and \fvar{$dr_3$} are the components of the displacement vector in the coordinate system defined in the second line of the input file.
+\fkey{dw\_par} assigns the fit parameter with number \fvar{parnumber} to the Debye-Waller factor of the atom. 
+The Debye-Waller factors are multiplied by \fvar{scale} in the calculation of the structure factors for the structure refinement. 
+Setting \fvar{scale} to $10$ or $100$ reduces the importance of the
+Debye-Waller factor for the fit, which sometimes improves the
+convergence behavior of the fit.
+\fkey{aniso\_dw\_par} defines a fit parameter for a component of the
+anisotropic Debye-Waller factor (See below). Up to six parameters for
+components of the anisotropic Debye-Waller factor can be given for one atom.
+\fkey{occ} assigns the occupancy of the atom to the parameter with the number \fvar{parnumber}.
+For each atom only a line with the \fkey{pos} keyword has to be given, the other keywords are optional.
+The \fvar{parnumber} gives the number of the fit parameter used for each keyword. 
+\fvar{parnumber} can be the same for different atoms, for example if the atoms are symmetry-related or if they are expected to have a  similar Debye-Waller factor.
+Starting values for the fit parameters are given with the \fkey{start\_par} keyword. 
+The fit parameter with number 0 is always a scale factor between the experimental and calculated intensities.
+
+The symmetry of the structure is not included automatically in the fit. 
+The symmetry constraints have to be given explicitly by using appropriate displacement vectors.
+For example, if an atom sits on a high-symmetry site and is only allowed to move in the direction perpendicular to the surface ($r_3$ direction), then an appropriate displacement vector would be
+\begin{filestruc}
+pos Si 0.5 0.5 0.0 0.0 1.0 \\
+displ1 0.0 0.0 1.0 \\
+\end{filestruc}
+The symmetry relations between two atoms can be incorporated by giving them appropriate displacement vectors with the same parameter number. For example,
+\begin{filestruc}
+pos Si 0.7 0.5 0.0 0.0 1.0 \\
+displ1 1 1.0 0.0 0.0 \\
+displ2 2 0.0 1.0 0.0 \\
+displ3 3 0.0 0.0 1.0 \\
+pos Si 0.3 0.5 0.0 0.0 1.0 \\
+displ1 1 -1.0 0.0 0.0 \\
+displ2 2  0.0 -1.0 0.0 \\
+displ3 3  0.0 0.0 1.0 \\
+\end{filestruc}
+constraints the positions of the two atoms to be point symmetric around (0.5 0.5) in the surface plane with the same height.
+
+For the anisotropic Debye-Waller factor, symmetry constraints can be
+given analogously. For example,
+\begin{filestruc}
+aniso\_dw\_par 1 1.0 1.0 0.0 0.0 0.0 0.0 \\
+aniso\_dw\_par 2 0.0 0.0 1.0 0.0 0.0 0.0 
+\end{filestruc}
+assigns parameter 1 to the in-plane componenents $\beta_{11}$ and
+$\beta_{22}$ and parameter 2 to the out-of-plane component
+$\beta_{33}$. So the two in-plane components have the same value, and the
+out-of-plane component is independent, while off-diagonal elements are
+not fitted.
+
+
+
+\section{Output}
+The output file from the calculation of the Patterson map looks like this:
+\begin{filestruc}
+{\em $r_1$ $r_2$ value} \\
+{\em $r_1$ $r_2$ value} \\
+\ldots \\
+\ldots \\
+\end{filestruc}
+$r_1$ and $r_2$ are the reduced coordinates in the unit cell define in the structure input file, and \fvar{value} is the value of the Patterson function.
+ 
+The output file of the structure factors calculated for a model structure has the following format:
+\begin{filestruc}
+\em {comment \\
+$h$ $k$ $l$ $F$ } 0.1 \\
+{\em $h$ $k$ $l$ $F$ } 0.1 \\
+\ldots \\
+\ldots \\
+\end{filestruc}
+with $h$, $k$ and $l$  the reciprocal lattice coordinates of the reflection, abd $F$  the structure factor.
+The \fvar{comment} is the one defined in the main input file.
+The output file of the structure factors can be used as an input file for e. g. calculation of the Patterson map, if the comment in the first line is deleted.
+
+The output of the structure optimization is printed to standard output, so this should be saved to some file.
+For each fit, $\chi^2$ and $R$ are printed, then the optimized parameters are printed. 
+The errors for each parameter are calculated from the square root of the diagonal terms of the covariance matrix. 
+The complete covariance matrix is printed as well.
+
+An output file with the optimized atomic positions is made for the structural optimization as well. 
+The format is the same as the input file for the calculation of the structure factors.
+The output file corresponds to the last fit, if several fits are made at the same time.
+
+\end{document}

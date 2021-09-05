@@ -1,0 +1,28 @@
+simple test for fit
+3.840312 3.840312 9.406805 90.0 90.0 120.0
+pos Si 0.0 0.0 1.0 0.0 0.85
+aniso_dw 0.09 0.01 0.0 0.0 0.05 0.0
+aniso_dw_par 10 0.01 0.0 0.0 0.0 0.0 0.0
+aniso_dw_par 11 0.0 0.01 0.0 0.0 0.0 0.0
+aniso_dw_par 12 0.0 0.0 0.01 0.0 0.0 0.0
+aniso_dw_par 13 0.0 0.0 0.0 0.01 0.0 0.0
+aniso_dw_par 14 0.0 0.0 0.0 0.0 0.01 0.0
+aniso_dw_par 15 0.0 0.0 0.0 0.0 0.0 0.01
+occ 20
+pos Si 0.72 0.70 1.01 0.0
+aniso_dw 0.21 0.21 0.21 0.03 0.03 0.03
+aniso_dw_par 16 0.01 0.01 0.01 0.0 0.0 0.0
+aniso_dw_par 17 0.0 0.0 0.0 0.01 0.01 0.01
+displ1 1 1.0 0.0 0.0
+displ2 2 0.0 1.0 0.0
+displ3 3 0.0 0.0 1.0
+start_par 0 1.0
+start_par 1 0.000
+start_par 2 0.000
+start_par 3 -0.000
+start_par 10 0.0
+start_par 11 -0.0
+start_par 16 0.0 
+start_par 17 0.0
+start_par 20 -0.00
+#Commment test 
