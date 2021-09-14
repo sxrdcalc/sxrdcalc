@@ -1,5 +1,4 @@
 # sxrdcalc
-====
 
 sxrdcalc was developed to analyse the surface X-ray
 diffraction data. It can be used to calculate X-ray diffraction
