@@ -7,6 +7,8 @@ experimental data, and to fit a model structure to experimental data
 using either a Levenberg-Marquardt least-squares fit or simulated
 annealing.
 
+Please cite Ref. [1], if you use the present software package in a research paper. 
+
 ## Requirement
 C compiler (intel, GNU, etc. )  
 GNU scientific library
@@ -23,3 +25,4 @@ The distribution of the program package and the source codes for sxrd follow GNU
 ## Author
 Wolfgang Voegeli (Department of Physics, Tokyo Gakugei University)
 
+[1] W. Voegeli, K. Akimoto, T. Aoyama, K. Sumitani, S. Nakatani, H. Tajiri, T. Takahashi, Y. Hisada, S. Mukainakano, X. Zhang, H. Sugiyama, H. Kawata, Applied Surface Science 252 (2006) 5259
