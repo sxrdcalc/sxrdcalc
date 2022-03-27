@@ -16,7 +16,7 @@ OBJS= sxrdcalc.o sxrdio.o calcs.o
 all:	sxrdcalc
 
 sxrdcalc: $(OBJS)
-	$(CC) $(CFLAGS) -o sxrdcalc $(LIBS) $(OBJS)
+	$(CC) $(CFLAGS) -o sxrdcalc $(OBJS) $(LIBS)
 
 sxrdcalc.o: sxrdcalc.c sxrddefs.h sxrdio.h calcs.h
 	$(CC) $(CFLAGS) -c sxrdcalc.c  
